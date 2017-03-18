@@ -4,6 +4,7 @@ import { Bins } from '../../../imports/collections/bins';
 
 class BinsList extends Component {
   render() {
+    console.log(this.props.bins);
     return (
       <div>Bins List</div>
     );
