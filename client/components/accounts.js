@@ -12,10 +12,11 @@ class Accounts extends Component {
   }
   componentWillUnmount() {
     // find forms and destroy them ourselves.
+    Blaze.remove(this.view);
   }
   render() {
     return (
-      <div></div>
+      <div ref="container"></div>
     );
   }
 }
