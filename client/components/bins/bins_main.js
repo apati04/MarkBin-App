@@ -8,7 +8,7 @@ import BinsShare from './bins_share';
 class BinsMain extends Component {
   render() {
     if(!this.props.bin) { return <div>Loading...</div> }
-    
+
     return (
       <div>
         <BinsEditor bin={this.props.bin} />
@@ -22,5 +22,6 @@ class BinsMain extends Component {
 export default createContainer((props) => {
   const { binId } = props.params;
   Meteor.subscribe('bins');
+  Meteor.subscribe('sharedBins');
   return { bin: Bins.findOne(binId) };
 }, BinsMain);
